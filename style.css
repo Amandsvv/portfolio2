@@ -146,6 +146,7 @@ body{
     max-width: 950px;
 }
 .project-1{
+    max-width:1080px;
     display:flex;
     align-items: center;
 }
@@ -363,6 +364,9 @@ a.a1{
     .project{
         max-width: 800px;
     }
+    .project-1{
+        max-width:800px;
+    }
     .about{
         max-width: 800px;
     }
@@ -403,6 +407,7 @@ a.a1{
     }
     .project-1{
         flex-direction: column;
+        max-width:400px;
     }
     .menu-icon {
         display: block;
