@@ -359,6 +359,7 @@ a.a1{
     font-weight: 500;
 
     background-color: rgb(211,233,122);
+    cursor:pointer;
 }
 
 @media (max-width:1080px){
