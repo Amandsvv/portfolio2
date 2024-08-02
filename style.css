@@ -146,7 +146,7 @@ body{
     max-width: 950px;
 }
 .project-1{
-    max-width:1080px;
+    width:1080px;
     display:flex;
     align-items: center;
     justify-content:space-between;
@@ -409,6 +409,7 @@ a.a1{
     .project-1{
         flex-direction: column;
         max-width:400px;
+        margin: 0 auto;
     }
     .menu-icon {
         display: block;
