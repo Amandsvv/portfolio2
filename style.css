@@ -451,6 +451,9 @@ a.a1{
         max-width: 400px;
         margin: 50px auto;
     }
+    .cont-left{
+        width:400px;
+    }
     .cont-right{
         margin-top: 50px;
     }
