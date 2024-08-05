@@ -433,6 +433,7 @@ a.a1{
 
     .lists.active {
         display: flex;
+        z-index:3;
     }
     .profile-image{
         margin: 50px auto;
