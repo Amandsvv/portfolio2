@@ -324,7 +324,7 @@ a.a1{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.cont-right input{
+.cont-right input textarea{
     background-color: rgb(34,34,34);
     width: 100%;
     border-radius: 4px;
