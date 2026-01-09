@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+}
+/* Custom cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: white;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.02s ease-out;
+    z-index: 9999;
+}
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: "Bebas Neue";
+    font-size: 1.2rem;
+    font-weight:600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c4ff61;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: 120px 5% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #c4ff61;
+    color: #0a0a0a;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(196, 255, 97, 0.3);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c4ff61;
+}
+
+
+/* Image Section */
+.profile-image {
+    max-width: 600px;
+    margin: 60px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Capabilities Section */
+.capabilities {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.capabilities h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.capabilities-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.capabilities-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.capabilities-text p {
+    color: #b0b0b0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.skills-grid {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    border-color: #c4ff61;
+    color: #c4ff61;
+    transform: translateY(-2px);
+}
+
+/* Experience Section */
+.experience {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.experience h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #222;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-left {
+    flex: 1;
+}
+
+.experience-left h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-left h4 {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.experience-left p {
+    color: #b0b0b0;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.experience-right {
+    text-align: right;
+    color: #888;
+    font-size: 0.9rem;
+    min-width: 200px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.contact-intro {
+    margin-bottom: 3rem;
+}
+
+.contact-intro p {
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+.contact-intro a {
+    color: #c4ff61;
+    text-decoration: none;
+}
+
+.contact-intro a:hover {
+    text-decoration: underline;
+}
+
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-social a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.contact-social a:hover {
+    color: #c4ff61;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c4ff61;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #c4ff61;
+    color: #0a0a0a;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(196, 255, 97, 0.3);
+}
+
+/* Footer */
+footer {
+    padding: 2rem 5%;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: rgba(10, 10, 10, 0.98);
+        width: 100%;
+        padding: 2rem;
+        transition: left 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .capabilities h2,
+    .experience h2,
+    .contact h2 {
+        font-size: 2.5rem;
+    }
+    .hero,
+    .capabilities ,
+    .experience ,
+    .contact {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .experience-item {
+        flex-direction: column;
+    }
+
+    .experience-right {
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .capabilities-content {
+        flex-direction: column;
+    }
+}

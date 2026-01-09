@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="custom-cursor"></div>
     <header class="head">
         <div class="left-header">
             <p class="logo">AMAN KUMAR</p>
@@ -69,7 +70,7 @@
                 <div class="ball"><i class="fa-brands fa-git-alt"></i></div>
                 <div class="ball"><i class="fa-brands fa-figma"></i></div>
                 <div class="ball"><i class="fa-brands fa-python"></i></div>
-                <div class="ball"><i class="fa-duotone fa-solid fa-database"></i>   </div>
+                <div class="ball"><i class="fa-duotone fa-solid fa-database"></i> </div>
                 <img class="profile-image" height="450" src="images/profile-photo.jpg" alt="">
             </div>
         </div>
@@ -78,9 +79,15 @@
             <div class="project" id="work">
                 <div class="work-intro">
                     <p class="work-title">Featured Products</p>
-                    <p class="work-desc">Here are some of the selected projects that showcase my passion for Front-end
-                        development</p>
+                    <p class="work-desc">Here are some of the selected projects that showcase my passion for Web
+                        Development</p>
                 </div>
+                <div class="project-tabs">
+                    <button class="tab-btn active" data-cat="frontend">Frontend</button>
+                    <button class="tab-btn" data-cat="fullstack">Full Stack</button>
+                    <button class="tab-btn" data-cat="figma">Figma Work</button>
+                </div>
+
                 <div id="sentinel"></div>
             </div>
         </div>
@@ -94,12 +101,13 @@
                 <p class="about-degree">Pursuing MCA(AI/ML) at KR Mangalam University</p>
                 <p class="about-study">I am a Full Stack Web Developer based on college looking for exciting
                     opportunities.
-                    Has BCA background. Likes to focus on accessiblity when developing. Passionate and curious about
+                    Has BCA background Currently Pursuing MCA. Likes to focus on accessiblity when developing.
+                    Passionate and curious about
                     solving problems. Currently, I'm learning ML Concepts to better integrate it further in my projects,
                     Some libraries such as : Pandas, Numpy, matplotlib etc. and python onwards. While I am not
                     programming, I like to play Badminton, Browse net and chess too. Learning more to improve my skill.
                 </p>
-                <p class="more-about-link"><a href="" class="a1">More about me</a></p>
+                <p class="more-about-link"><a href="./about.html" class="a1">More about me</a></p>
             </div>
         </div>
         <div class="contact">
@@ -113,7 +121,8 @@
                 </p>
                 <p class="resume">
                     For more info here is my
-                    <a href="https://drive.google.com/file/d/1Lf44-tOIrpPszEiU2M4RedL8DMht4ONB/view?usp=sharing" download="Aman's_Resume">resume</a>
+                    <a href="https://drive.google.com/file/d/1Lf44-tOIrpPszEiU2M4RedL8DMht4ONB/view?usp=sharing"
+                        download="Aman's_Resume">resume</a>
                 </p>
                 <div class="social-media">
                     <a href="https://linkedin.com/in/aman-kumar-682177255" target="_blank">
@@ -149,6 +158,9 @@
         </div>
     </main>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="main.js"></script>
+
 </body>
 
 </html>
